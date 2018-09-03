@@ -23,7 +23,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/oblador/react-native-progress.git"
+    "url": "git@github.com:quenice/react-native-cardview.git"
   },
   "devDependencies": {
     "react-native": "^0.41.2"
