@@ -1,6 +1,6 @@
 {
   "name": "react-native-rn-cardview",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A ReactNative CardView Component for android and iOS",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,8 @@
     "cardview"
   ],
   "author": {
-    "name":"quenice",
-    "email":"qiubing.it@gmail.com"
+    "name": "quenice",
+    "email": "qiubing.it@gmail.com"
   },
   "license": "MIT",
   "repository": {
@@ -26,7 +26,11 @@
     "url": "git@github.com:quenice/react-native-cardview.git"
   },
   "devDependencies": {
-    "react-native": "^0.41.2"
+    "react": "^16.2.0",
+    "react-native": "^0.53.0"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
   },
   "dependencies": {
     "prop-types": "^15.6.0"
