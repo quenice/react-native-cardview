@@ -1,18 +1,34 @@
-
 {
   "name": "react-native-card-view",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A ReactNative CardView Component for android and iOS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
+    "ios",
+    "android",
+    "cardview"
   ],
-  "author": "",
-  "license": "",
-  "peerDependencies": {
+  "author": {
+    "name":"quenice",
+    "email":"qiubing.it@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/oblador/react-native-progress.git"
+  },
+  "devDependencies": {
     "react-native": "^0.41.2"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0"
   }
 }

@@ -1,6 +1,2 @@
-
-import { NativeModules } from 'react-native';
-
-const { RNCardView } = NativeModules;
-
-export default RNCardView;
+import CardView from './CardView'
+export default CardView;
