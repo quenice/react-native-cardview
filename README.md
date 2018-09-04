@@ -14,10 +14,7 @@
 
 #### iOS
 
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-rn-cardview` and add `RNCardView.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNCardView.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+> no need link
 
 #### Android
 
@@ -37,9 +34,42 @@
 
 ## Usage
 ```javascript
-import RNCardView from 'react-native-rn-cardview';
 
-// TODO: What to do with the module?
-RNCardView;
+/**
+ * Sample React Native CardView
+ *
+ */
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View} from 'react-native';
+import CardView from 'react-native-rn-cardview'
+
+
+export default class App extends Component {
+    render() {
+        return (
+				<CardView cardElevation={4}
+                          maxCardElevation={4}
+                          radius={10}
+                          backgroundColor={'#ffffff'}>
+                    <View style={{padding:10}}>
+                        <View>
+                            <Text>ReactNative CardView for iOS and Android</Text>
+                        </View>
+                        <View>
+                            <Text>This is test</Text>
+                        </View>
+                    </View>
+                </CardView>
+        );
+    }
+}
+
 ```
-  
+
+## Attributes
+Name | Type | Desc
+---|---|---
+cardElevation | Number | the elevation of the card view
+maxCardElevation | Number | if not set, equals the ``` cardElevation ``` default
+radius | Number | the border radius of the card view
+backgroundColor | String | the background color of the card view
