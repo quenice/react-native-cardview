@@ -1,10 +1,18 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
+import PropTypes from "prop-types";
 
 export default class CardView extends Component {
+    static propTypes = {
+        cardElevation: PropTypes.number,
+        maxCardElevation: PropTypes.number,
+        radius: PropTypes.number,
+        backgroundColor: PropTypes.string,
+    }
 
     render() {
-        const {cardElevation, radius} = this.props;
+        const {cardElevation, radius, backgroundColor, style, ...props} = this.props
+        if (backgroundColor) style.backgroundColor = backgroundColor
         if (cardElevation > 0) {
             return (
                 <View style={[{
@@ -16,7 +24,7 @@ export default class CardView extends Component {
                     shadowOpacity: 0.13,
                     borderRadius: radius,
                     shadowColor: 'rgba(153,153,153,1)'
-                }, this.props.style]}>
+                }, style]} {...props}>
                     {this.props.children}
                 </View>
             );
@@ -24,7 +32,7 @@ export default class CardView extends Component {
             return (
                 <View style={[{
                     borderRadius: radius,
-                }, this.props.style]}>
+                }, style]}  {...props}>
                     {this.props.children}
                 </View>
             );

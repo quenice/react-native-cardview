@@ -1,6 +1,6 @@
 package com.quenice.reactnative;
 
-import android.support.v4.view.ViewCompat;
+import android.graphics.Color;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
@@ -20,6 +20,7 @@ public class RNCardViewManager extends ViewGroupManager<CardView> {
     protected CardView createViewInstance(ThemedReactContext reactContext) {
         CardView cardView = new CardView(reactContext);
         cardView.setUseCompatPadding(true);
+        cardView.setContentPadding(0, 0, 0, 0);
         ReactViewGroup reactViewGroup = new ReactViewGroup(reactContext);
         cardView.addView(reactViewGroup);
         return cardView;
@@ -27,7 +28,7 @@ public class RNCardViewManager extends ViewGroupManager<CardView> {
 
     @ReactProp(name = "cardElevation", defaultFloat = 0f)
     public void setCardElevation(CardView view, float cardElevation) {
-        ViewCompat.setElevation(view, PixelUtil.toPixelFromDIP(cardElevation));
+        view.setCardElevation(PixelUtil.toPixelFromDIP(cardElevation));
     }
 
     @ReactProp(name = "maxCardElevation", defaultFloat = 0f)
@@ -40,6 +41,10 @@ public class RNCardViewManager extends ViewGroupManager<CardView> {
         view.setRadius(PixelUtil.toPixelFromDIP(radius));
     }
 
+    @ReactProp(name = "backgroundColor")
+    public void setBackgroundColor(CardView view, String color) {
+        view.setCardBackgroundColor(Color.parseColor(color == null || color.trim().equals("") ? "#ffffff" : color));
+    }
 
     @Override
     public View getChildAt(CardView parent, int index) {
