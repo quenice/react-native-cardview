@@ -33,6 +33,8 @@
 
 
 ## Usage
+
+### example
 ```javascript
 
 /**
@@ -65,6 +67,11 @@ export default class App extends Component {
 }
 
 ```
+### screenshots
+#### iOS
+![iOS](https://github.com/quenice/react-native-cardview/raw/master/screenshots/ios.png)
+#### android
+![android](https://github.com/quenice/react-native-cardview/raw/master/screenshots/android.png)
 
 ## Attributes
 Name | Type | Desc
