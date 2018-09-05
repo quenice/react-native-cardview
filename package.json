@@ -1,6 +1,6 @@
 {
   "name": "react-native-rn-cardview",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A ReactNative CardView Component for android and iOS",
   "main": "index.js",
   "scripts": {
