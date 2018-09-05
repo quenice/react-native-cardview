@@ -12,7 +12,12 @@ export default class CardView extends Component {
 
     render() {
         const {cardElevation = 0, radius = 0, backgroundColor, style = {}, ...props} = this.props
-        if (backgroundColor) style.backgroundColor = backgroundColor
+        let finalStyle
+        if (backgroundColor) {
+            finalStyle = Object.assign({}, style, {backgroundColor})
+        } else {
+            finalStyle = style
+        }
         if (cardElevation > 0) {
             return (
                 <View style={[{
@@ -24,7 +29,7 @@ export default class CardView extends Component {
                     shadowOpacity: 0.13,
                     borderRadius: radius,
                     shadowColor: 'rgba(96,96,96,1)'
-                }, style]} {...props}>
+                }, finalStyle]} {...props}>
                     {this.props.children}
                 </View>
             );
@@ -32,7 +37,7 @@ export default class CardView extends Component {
             return (
                 <View style={[{
                     borderRadius: radius,
-                }, style]}  {...props}>
+                }, finalStyle]}  {...props}>
                     {this.props.children}
                 </View>
             );
