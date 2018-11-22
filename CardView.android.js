@@ -9,6 +9,7 @@ export default class CardView extends React.Component {
         maxCardElevation: PropTypes.number,
         radius: PropTypes.number,
         backgroundColor: PropTypes.string,
+        cornerRadius: PropTypes.number
     }
 
     render() {
