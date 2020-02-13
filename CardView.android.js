@@ -24,7 +24,7 @@ export default class CardView extends React.Component {
 
 const getFinalStyle = (props, style = {}) => {
     const {cardElevation = 0, radius = 0} = props
-    const paddingBottom = 2 * cardElevation + radius
+    const paddingBottom = 0
 
     const computedStyle = StyleSheet.flatten(style)
     const keys = Object.keys(computedStyle)
