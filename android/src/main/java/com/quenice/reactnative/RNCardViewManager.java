@@ -19,7 +19,7 @@ public class RNCardViewManager extends ViewGroupManager<CardView> {
     @Override
     protected CardView createViewInstance(ThemedReactContext reactContext) {
         CardView cardView = new CardView(reactContext);
-        cardView.setUseCompatPadding(true);
+        // cardView.setUseCompatPadding(true);
         cardView.setContentPadding(0, 0, 0, 0);
         ReactViewGroup reactViewGroup = new ReactViewGroup(reactContext);
         cardView.addView(reactViewGroup);
